@@ -1,26 +1,17 @@
 'use strict'
-var answerWork = prompt('Компьютер работает? Да/Нет?', '');
-if (answerWork == 'Нет' || answerWork == 'нет') {
-    var answerOn = prompt('Компьютер включен? Да/Нет?', '');
-    if (answerOn == 'Да' || answerOn == 'да') {
-        var answerOs = prompt('OC грузится? Да/Нет?', '');
-        if (answerOs == 'Да' || answerOs == 'да') {
-            alert('Ну тогда Ой');
-            } else if (answerOs == 'Нет' || answerOs == 'нет') {
-            alert('Переустанови ее');
-            } else {
-            alert('Обнови и введи еще раз')
-            }; 
-                
-    } else if (answerOn == 'Нет' || answerOn == 'нет') {
-    alert('Включи его')
-    } else {
-    alert('Обнови и введи еще раз')
-    };
+var a = ['vasya', 'petya', 'artem', 'masha'];
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y' ,'z'];
+var matrixResult = [];
+var indexMatrixResult = 0;
 
-
-} else if (answerWork == 'Да' || answerWork == 'да') {
-alert('Молодец');
-} else {
-alert('Обнови и введи еще раз');
+for (var i=0; i < alphabet.length; i++) {
+    for (var j=0; j < a.length; j++) {
+        if (alphabet[i] === a[j][0]) {        
+        matrixResult[indexMatrixResult] = a[j];
+        indexMatrixResult++;
+        };
+    }; 
 };
+
+console.log(matrixResult);
+
